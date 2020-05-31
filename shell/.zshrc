@@ -28,7 +28,7 @@ done
 unset file
 
 # Setup xdebug
-#export XDEBUG_CONFIG="idekey=VSCODE"
+export XDEBUG_CONFIG="idekey=VSCODE"
 
 # Alias hub to git
 #eval "$(hub alias -s)"
@@ -37,3 +37,4 @@ unset file
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/mysql/bin:$PATH"

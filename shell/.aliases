@@ -9,10 +9,9 @@ alias la='ls -AF'
 
 # SSH
 alias sshconfig="vi ~/.ssh/config"
-alias copykey='command cat ~/.ssh/id_rsa.public | pbcopy'
+alias copykey='command cat ~/.ssh/id_rsa.pub | pbcopy'
 
 # Git
-alias git='git --no-pager'
 alias nah='git reset --hard;git clean -df'
 alias ga="git add ."
 alias gaa="git add -A"
@@ -51,9 +50,7 @@ alias duskf="php artisan dusk --filter"
 # Fast open
 alias o="open"
 alias ql="quick-look"
-
-# List all files colorized in long format
-#alias l="ls -laF"
+alias finder='open -a 'Finder''
 
 # PhpStorm
 #alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
@@ -62,7 +59,7 @@ alias ql="quick-look"
 #alias flush-redis="redis-cli FLUSHALL"
 
 # VSCode
-alias code='open -a "/Applications/Visual Studio Code.app" "`pwd`"'
+#alias code='open -a "/Applications/Visual Studio Code.app"'
 
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"

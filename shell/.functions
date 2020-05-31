@@ -105,7 +105,10 @@ xdebug() {
       echo "xdebug is now inactive";
    fi
 }
-
+## OSX
+# /usr/local/etc/my.cnf
+## Others
+# ~/.my.cnf
 function db {
     if [ "$1" = "refresh" ]; then
         mysql -uroot -e "drop database $2; create database $2"

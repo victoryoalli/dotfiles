@@ -71,4 +71,4 @@ composer global require laravel/valet
 valet install
 
 # Brew installs
-source .brewinstall
+source macos/brewinstall
