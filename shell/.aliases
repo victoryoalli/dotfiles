@@ -3,12 +3,16 @@
 # Shell
 alias hosts="sudo vi /etc/hosts"
 alias h="history"
+alias l='ls -l'
+alias l1='ls -1'
+alias la='ls -AF'
 
 # SSH
 alias sshconfig="vi ~/.ssh/config"
 alias copykey='command cat ~/.ssh/id_rsa.public | pbcopy'
 
 # Git
+alias git='git --no-pager'
 alias nah='git reset --hard;git clean -df'
 alias ga="git add ."
 alias gaa="git add -A"
@@ -46,6 +50,7 @@ alias duskf="php artisan dusk --filter"
 
 # Fast open
 alias o="open"
+alias ql="quick-look"
 
 # List all files colorized in long format
 #alias l="ls -laF"

@@ -42,12 +42,12 @@ brew install ack
 
 echo 'Install brew-cask'
 echo '-----------------'
-brew tap caskroom/cask
-brew install brew-cask
+# brew tap homebrew/cask-cask
+# brew install brew-cask
 
 echo 'Install some nice quicklook plugins'
 echo '-----------------------------------'
-brew cask install --force qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package
+brew cask install --no-quarantine --force qlvideo qlcolorcode quicklookapk qlstephen qlmarkdown quicklook-json qlimagesize qlprettypatch quicklook-csv betterzip WebPQuickLook suspicious-package
 
 echo 'Install php'
 echo '-----------'
@@ -59,3 +59,20 @@ brew install php@7.4
 echo 'Install imagemagick'
 echo '-------------------'
 brew install imagemagick
+
+#echo 'Install mysql'
+#echo '-------------'
+#brew install mysql@5.7
+#brew services start mysql@5.7
+
+echo 'Install ghostscript'
+echo '-------------------'
+brew install ghostscript
+
+echo 'Install mackup'
+echo '--------------'
+brew install mackup
+
+echo 'Install zsh-autosuggestions'
+echo '---------------------------'
+brew install zsh-autosuggestions

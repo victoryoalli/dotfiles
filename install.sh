@@ -70,19 +70,5 @@ echo '---------------------'
 composer global require laravel/valet
 valet install
 
-#echo 'Install mysql'
-#echo '-------------'
-#brew install mysql@5.7
-#brew services start mysql@5.7
-
-echo 'Install ghostscript'
-echo '-------------------'
-brew install ghostscript
-
-echo 'Install mackup'
-echo '--------------'
-brew install mackup
-
-echo 'Install zsh-autosuggestions'
-echo '---------------------------'
-brew install zsh-autosuggestions
+# Brew installs
+source .brewinstall
