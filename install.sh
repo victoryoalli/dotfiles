@@ -26,9 +26,6 @@ ln -s $HOME/.dotfiles/shell/.vim $HOME/.vim
 #rm $HOME/.yarnrc
 #ln -s $HOME/.dotfiles/shell/.yarnrc $HOME/.yarnrc
 
-# Activate z
-cd ~/.dotfiles/shell
-
 echo 'Install composer'
 echo '----------------'
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -70,5 +67,8 @@ echo '---------------------'
 composer global require laravel/valet
 valet install
 
-# Brew installs
+# ## MAC ONLY
+# # Symlink the Mackup config
+# ln -s $HOME/.dotfiles/macos/.mackup.cfg $HOME/.mackup.cfg
+# # Brew installs
 source macos/brewinstall

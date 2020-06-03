@@ -27,6 +27,9 @@ for file in ~/.dotfiles/shell/.{exports,aliases,functions}; do
 done
 unset file
 
+# ## https://github.com/rupa/z
+#. $HOME/.dotfiles/shell/z.sh
+
 # Setup xdebug
 export XDEBUG_CONFIG="idekey=VSCODE"
 

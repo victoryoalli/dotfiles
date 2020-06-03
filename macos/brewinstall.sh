@@ -1,3 +1,6 @@
+
+#!/bin/bash
+
 echo 'Install homebrew'
 echo '----------------'
 echo install homebrew

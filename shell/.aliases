@@ -3,25 +3,30 @@
 # Shell
 alias hosts="sudo vi /etc/hosts"
 alias h="history"
+alias ls='ls -Gh'
 alias l='ls -l'
 alias l1='ls -1'
-alias la='ls -AF'
+alias lf='ls -AF'
+alias ll='ls -lFA'
+alias ld='ls -ldA'
 
 # SSH
 alias sshconfig="vi ~/.ssh/config"
 alias copykey='command cat ~/.ssh/id_rsa.pub | pbcopy'
 
-# Git
+# ## Git
 alias nah='git reset --hard;git clean -df'
 alias ga="git add ."
 alias gaa="git add -A"
 alias wip="git add .; git commit -m 'wip'"
 alias gs="git status"
+alias gdi="git diff"
 alias gc="git checkout"
 alias gpo="git push origin"
 alias gm="git merge"
 alias glo="git log --oneline --decorate"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+#alias git=hub
 
 # PHP
 alias c="composer"
@@ -35,6 +40,9 @@ alias art="php artisan"
 alias artmf='php artisan migrate:fresh --seed'
 alias serve='php artisan serve'
 alias tinker='php artisan tinker'
+
+#Deploy
+alias deploy='dep deploy'
 
 # PHP
 alias phpunit="vendor/bin/phpunit"
@@ -96,3 +104,6 @@ alias hideicons='defaults write com.apple.finder CreateDesktop false; killall Fi
 alias showicons='defaults write com.apple.finder CreateDesktop true; killall Finder'
 
 alias cat='bat -p'
+
+# #Custom
+alias scrape='scrapeUrl'
