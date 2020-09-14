@@ -20,6 +20,9 @@ source $ZSH/oh-my-zsh.sh
 # Enable autosuggestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# Cargo for Rust Lang => Installed with rustup.
+#
+# source $HOME/.cargo/env
 
 # Load the shell dotfiles, and then some:
 for file in ~/.dotfiles/shell/.{exports,aliases,functions}; do
@@ -41,3 +44,4 @@ export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
+

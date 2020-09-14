@@ -21,6 +21,8 @@ rm $HOME/.vimrc
 ln -s $HOME/.dotfiles/shell/.vimrc $HOME/.vimrc
 rm $HOME/.vim
 ln -s $HOME/.dotfiles/shell/.vim $HOME/.vim
+# Symlink ack pref
+ln -s $HOME/.dotfiles/shell/.ackrc $HOME/.ackrc
 
 # Symlink yarn prefs
 #rm $HOME/.yarnrc
@@ -66,9 +68,3 @@ echo 'Install laravel valet'
 echo '---------------------'
 composer global require laravel/valet
 valet install
-
-# ## MAC ONLY
-# # Symlink the Mackup config
-# ln -s $HOME/.dotfiles/macos/.mackup.cfg $HOME/.mackup.cfg
-# # Brew installs
-source macos/brewinstall

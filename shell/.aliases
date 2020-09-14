@@ -12,10 +12,11 @@ alias ld='ls -ldA'
 
 # SSH
 alias sshconfig="vi ~/.ssh/config"
-alias copykey='command cat ~/.ssh/id_rsa.pub | pbcopy'
+alias sshkey='command cat ~/.ssh/id_rsa.pub | pbcopy'
 
 # ## Git
 alias nah='git reset --hard;git clean -df'
+alias g="git"
 alias ga="git add ."
 alias gaa="git add -A"
 alias wip="git add .; git commit -m 'wip'"
@@ -23,6 +24,8 @@ alias gs="git status"
 alias gdi="git diff"
 alias gc="git checkout"
 alias gpo="git push origin"
+alias pull="git pull"
+alias merge="git merge"
 alias gm="git merge"
 alias glo="git log --oneline --decorate"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
@@ -37,6 +40,7 @@ alias cda="composer dump-autoload -o"
 
 # Laravel Artisan
 alias art="php artisan"
+alias artr="php artisan route:list"
 alias artmf='php artisan migrate:fresh --seed'
 alias serve='php artisan serve'
 alias tinker='php artisan tinker'
@@ -64,7 +68,7 @@ alias finder='open -a 'Finder''
 #alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 
 # Redis
-#alias flush-redis="redis-cli FLUSHALL"
+alias flush-redis="redis-cli FLUSHALL"
 
 # VSCode
 #alias code='open -a "/Applications/Visual Studio Code.app"'
