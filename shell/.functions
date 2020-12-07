@@ -1,6 +1,6 @@
 # Switch PHP versions
 phpv() {
-    if [ $1 = "7.4" ]; then
+    if [ $1 = "8.0" ]; then
         valet use php
     else
         valet use php@$1
@@ -15,6 +15,7 @@ alias php71="phpv 7.1"
 alias php72="phpv 7.2"
 alias php73="phpv 7.3"
 alias php74="phpv 7.4"
+alias php80="phpv 8.0"
 
 
 # Create a new directory and enter it
@@ -117,7 +118,7 @@ function db {
     elif [ "$1" = "drop" ]; then
         mysql -uroot -e "drop database $2"
     elif [ "$1" = "list" ]; then
-        mysql -uroot -e "show databases"
+        mysql -uroot -e "show databases" | perl -p -e's/\|| *//g'
     fi
 }
 

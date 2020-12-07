@@ -78,3 +78,8 @@ brew install mackup
 echo 'Install zsh-autosuggestions'
 echo '---------------------------'
 brew install zsh-autosuggestions
+
+echo 'Install lame for audio convertion'
+echo '---------------------------'
+brew install lame
+
