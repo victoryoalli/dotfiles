@@ -1,0 +1,113 @@
+{
+	"Construct": {
+		"prefix": "_c",
+		"body": [
+			"public function __construct($1)",
+			"{",
+			"\t//parent::__construct();",
+			"\t$2",
+			"}"
+		],
+		"description": "Creates a php constructor"
+	},
+	"Invoke" : {
+		"prefix": "_i",
+		"body": [
+			"public function __invoke($1)",
+			"{",
+			"\t$2",
+			"}"
+		],
+		"description": "Creates a invoke function"
+
+	},
+	"Public Method": {
+		"prefix": "_m",
+		"body": [
+			"${1:public} function $2($3)",
+			"{",
+			"	$4",
+			"}"
+		],
+		"description": "New public method"
+	},
+	"Laravel New Get Attribute": {
+		"prefix": "_ga",
+		"body": [
+			"${1:public} function get${2}Attribute()",
+			"{",
+			"	return \\$this->${3};",
+			"}"
+		],
+		"description": "New public method"
+	},
+	"Laravel New Set Attribute": {
+		"prefix": "_sa",
+		"body": [
+			"${1:public} function set${2}Attribute(\\$value)",
+			"{",
+			"	\\$this->${3} = \\$value;",
+			"}"
+		],
+		"description": "New public method"
+	},
+	"Laravel Local Scope": {
+		"prefix": "_sc",
+		"body": [
+			"public function scope${2}(\\$query)",
+			"{",
+			"	return \\$query->${3};",
+			"}"
+		],
+		"description": "New public method"
+	},
+	"Laravel Local Scope Where": {
+		"prefix": "_scw",
+		"body": [
+			"public function scope${2}(\\$query,${3})",
+			"{",
+			"	return \\$query->where${2}($3);",
+			"}"
+		],
+		"description": "New public method"
+	},
+	"New Test": {
+		"prefix": "_t",
+		"body": [
+			"/** @test */"
+			"public function it_${1}()",
+			"{",
+			"	\\$$this->assertTrue(true);",
+			"}"
+		],
+		"description": "New Unit Test"
+	},
+	"Guarded": {
+		"prefix": "_gr",
+		"body": [
+			"protected \\$$guarded = [${1}];"
+		],
+		"description": "Empty guarded attributes"
+	},
+	"Fillable": {
+		"prefix": "_fi",
+		"body": [
+			"protected \\$$fillable = [${1}];"
+		],
+		"description": "Empty guarded attributes"
+	},
+	"Casts": {
+		"prefix": "_cs",
+		"body": [
+			"protected \\$$casts = [${1} => ${2}];"
+		],
+		"description": "Empty casts attributes"
+	},
+	"Appends": {
+		"prefix": "_ap",
+		"body": [
+			"protected \\$$appends = [${1}];"
+		],
+		"description": "Empty appends attributes"
+	}
+}

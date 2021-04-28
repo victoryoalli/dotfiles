@@ -20,6 +20,7 @@
 --ignore-dir=.idea/
 --ignore-dir=node_modules/
 --ignore-dir=vendor/
+--ignore-dir=storage/
 
 #make sure ack knows how to search common filetypes used in rails projects
 --type-add=css=scss

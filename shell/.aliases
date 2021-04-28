@@ -9,6 +9,7 @@ alias l1='ls -1'
 alias lf='ls -AF'
 alias ll='ls -lFA'
 alias ld='ls -ldA'
+alias tree='tree -C -I "node_modules|vendor"'
 
 # SSH
 alias sshconfig="vi ~/.ssh/config"
@@ -26,6 +27,7 @@ alias gdi="git diff"
 alias gc="git checkout"
 alias gpo="git push origin"
 alias pull="git pull"
+alias fetch="git fetch"
 alias merge="git merge"
 alias gm="git merge"
 alias glo="git log --oneline --decorate"

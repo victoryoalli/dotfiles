@@ -42,21 +42,22 @@ brew install ack
 #echo '-------------'
 #brew install doctl
 
-echo 'Install brew-cask'
-echo '-----------------'
-# brew tap homebrew/cask-cask
-# brew install brew-cask
+#echo 'Install brew-cask'
+#echo '-----------------'
+#brew tap homebrew/cask-cask
+#brew install brew-cask
 
 echo 'Install some nice quicklook plugins'
 echo '-----------------------------------'
-brew cask install --no-quarantine --force qlvideo qlcolorcode quicklookapk qlstephen qlmarkdown quicklook-json qlimagesize qlprettypatch quicklook-csv betterzip WebPQuickLook suspicious-package
+#brew cask install --no-quarantine --force qlvideo qlcolorcode quicklookapk qlstephen qlmarkdown quicklook-json qlimagesize qlprettypatch quicklook-csv betterzip WebPQuickLook suspicious-package
 
 echo 'Install php'
 echo '-----------'
 #brew install php@7.0
-brew install php@7.1
+#brew install php@7.1
 brew install php@7.2
 brew install php@7.4
+brew install php
 
 echo 'Install imagemagick'
 echo '-------------------'
