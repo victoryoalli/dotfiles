@@ -119,6 +119,8 @@ function db {
         mysql -uroot -e "drop database $2"
     elif [ "$1" = "list" ]; then
         mysql -uroot -e "show databases" | perl -p -e's/\|| *//g'
+    elif [ "$1" = "show:tables" ]; then
+	mysql -uroot "$2" -e  "show tables" | perl -p -e's/\|| *//g'
     fi
 }
 

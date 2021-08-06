@@ -32,6 +32,7 @@ alias merge="git merge"
 alias gm="git merge"
 alias glo="git log --oneline --decorate"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gaut='git shortlog -s -n --all --no-merges'
 
 # PHP
 alias c="composer"
@@ -97,7 +98,7 @@ alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 alias sudo='sudo '
 
 # Scape webpage
-#alias scrape="scrapeUrl"
+alias scrape="scrapeUrl"
 
 # Switch NPM
 #alias npmnpm="npm config set registry https://registry.npmjs.org"
@@ -111,5 +112,4 @@ alias showicons='defaults write com.apple.finder CreateDesktop true; killall Fin
 
 alias cat='bat -p'
 
-# #Custom
-alias scrape='scrapeUrl'
+alias ackdd="ack '\W(ray|dd|dump)\W'"
