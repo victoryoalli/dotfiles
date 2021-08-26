@@ -10,9 +10,7 @@ phpv() {
     source ~/.zshrc
 }
 
-alias php70="phpv 7.0"
-alias php71="phpv 7.1"
-alias php72="phpv 7.2"
+alias php56="phpv 5.6"
 alias php73="phpv 7.3"
 alias php74="phpv 7.4"
 alias php80="phpv 8.0"
