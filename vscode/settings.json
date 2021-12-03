@@ -1,16 +1,19 @@
 {
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-    "php-cs-fixer.lastDownload": 1618852336390,
+    "php-cs-fixer.lastDownload": 1637956071273,
     "diffEditor.renderSideBySide": true,
     "explorer.openEditors.visible": 0,
     "explorer.decorations.badges": false,
     "window.openFilesInNewWindow": "on",
     "emmet.triggerExpansionOnTab": true,
     "editor.renderControlCharacters": true,
+    "editor.bracketPairColorization.enabled": true,
     "workbench.colorCustomizations": {
         "errorLens.hintForeground": "#ffc600A1",
         "errorLens.hintBackground": "#ffc60003",
-        "errorLens.errorBackground": "#ff000005"
+        "errorLens.errorBackground": "#ff000005",
+        "editorCursor.background": "#333999",
+        "editorCursor.foreground": "#F04464DD"
     },
     "errorLens.fontSize": "12",
     // "errorLens.fontFamily": "Comic Sans MS",
@@ -21,7 +24,7 @@
         "hint"
     ],
     "errorLens.exclude": [
-        "never (read|used)",
+        "never (read|used)"
     ],
     "files.associations": {
         "*.blade.php": "html"
@@ -32,30 +35,21 @@
     "eslint.packageManager": "yarn",
     "eslint.alwaysShowStatus": true,
     "eslint.run": "onSave",
-    "prettier.eslintIntegration": true,
-    "prettier.semi": false,
     "editor.fontFamily": "'JetBrains Mono','Dank Mono',\"Fira Code\", Menlo, Monaco, 'Courier New', monospacete",
     "editor.fontLigatures": true,
     "php-cs-fixer.onsave": true,
-    "php-cs-fixer.formatHtml": true,
+    "php-cs-fixer.formatHtml": false,
     "[php]": {
         "editor.defaultFormatter": "junstyle.php-cs-fixer"
     },
     "php-cs-fixer.config": ".php_cs",
     "editor.find.addExtraSpaceOnTop": false,
     "editor.fontSize": 16,
-    "workbench.colorTheme": "Nord Wave",
-    "gitlens.views.repositories.location": "gitlens",
-    "gitlens.views.fileHistory.location": "gitlens",
-    "gitlens.views.lineHistory.location": "gitlens",
-    "gitlens.views.compare.location": "gitlens",
-    "gitlens.views.search.location": "gitlens",
+    "workbench.colorTheme": "GitHub Dark",
     "search.showLineNumbers": true,
-    "editor.formatOnSaveTimeout": 5000,
     "editor.wordWrapColumn": 120,
     "window.nativeFullScreen": false,
     "html.format.wrapLineLength": 0,
-    "workbench.statusBar.visible": true,
     "editor.tokenColorCustomizations": {
         "[Material Theme Ocean High Contrast]": {
             "comments": "#63472d",
@@ -84,15 +78,40 @@
     "workbench.sideBar.location": "left",
     "editor.cursorBlinking": "solid",
     "python.defaultInterpreterPath": "/usr/local/bin/python3",
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
     "editor.minimap.enabled": false,
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "breadcrumbs.enabled": false,
+    "editor.accessibilitySupport": "off",
+    "editor.tabSize": 8,
+    "editor.cursorStyle": "line",
+    "editor.insertSpaces": false,
+    "editor.lineNumbers": "on",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
+    "security.workspace.trust.untrustedFiles": "open",
+    "tabnine.experimentalAutoImports": true,
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": true
+    },
+    "terminal.integrated.env.osx": {
+        "FIG_NEW_SESSION": "1"
+    },
+    "workbench.activityBar.visible": false,
+    "vetur.format.defaultFormatter.html": "prettyhtml",
+    "vetur.format.options.tabSize": 4,
+    "vetur.format.defaultFormatterOptions": {
+        "prettyhtml": {
+            "printWidth": 160, // No line exceeds 160 characters
+        }
+    },
+    "mssql.connections": []
 }

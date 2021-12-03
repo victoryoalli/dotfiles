@@ -42,7 +42,7 @@ export XDEBUG_CONFIG="idekey=VSCODE"
 # Extra PATH
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
-export PATH="/usr/local/bin:$PATH"
+#export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
