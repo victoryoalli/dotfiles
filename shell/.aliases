@@ -60,6 +60,10 @@ alias pf="phpunit --filter "
 alias dusk="php artisan dusk"
 alias duskf="php artisan dusk --filter"
 
+alias pest="vendor/bin/pest"
+alias pe="pest"
+alias pef="pe --filter "
+
 # JavaScript
 #alias jest="./node_modules/.bin/jest"
 

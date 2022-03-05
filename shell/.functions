@@ -1,6 +1,6 @@
 # Switch PHP versions
 phpv() {
-    if [ $1 = "8.0" ]; then
+    if [ $1 = "8.1" ]; then
         valet use php
     else
         valet use php@$1
@@ -13,7 +13,7 @@ phpv() {
 alias php56="phpv 5.6"
 alias php73="phpv 7.3"
 alias php74="phpv 7.4"
-alias php80="phpv 8.0"
+alias php81="phpv 8.1"
 
 
 # Create a new directory and enter it
@@ -131,5 +131,18 @@ function scheduler () {
 }
 
 function lec () {
+	if [ "$1" = "" ]; then
+		echo "lec <domain>"
+	fi
 	dig -t txt "_acme-challenge.$1" | egrep "[0-9].*IN.*TXT"
+}
+
+function gitzip () {
+	if [ $# -eq 0 ]; then
+		echo "gitzip <filename>.zip <branch>"
+	elif [ $2 = "" ]; then
+		git archive --format zip --output $1 main
+	else
+		git archive --format zip --output  $1 $2
+	fi
 }

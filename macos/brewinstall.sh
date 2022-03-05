@@ -53,8 +53,8 @@ echo '-----------------------------------'
 
 echo 'Install php'
 echo '-----------'
-#brew install php@7.0
-#brew install php@7.1
+## https://github.com/shivammathur/homebrew-php
+brew tap shivammathur/php
 brew install php@7.2
 brew install php@7.4
 brew install php
