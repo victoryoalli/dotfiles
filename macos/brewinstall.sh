@@ -59,6 +59,9 @@ brew install php@7.2
 brew install php@7.4
 brew install php
 
+brew tap nicoverbruggen/homebrew-cask
+brew install --cask phpmon
+
 echo 'Install imagemagick'
 echo '-------------------'
 brew install imagemagick
