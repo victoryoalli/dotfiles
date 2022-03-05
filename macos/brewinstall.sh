@@ -65,8 +65,7 @@ brew install imagemagick
 
 #echo 'Install mysql'
 #echo '-------------'
-#brew install mysql@5.7
-#brew services start mysql@5.7
+brew install mysql
 
 echo 'Install ghostscript'
 echo '-------------------'
@@ -74,7 +73,7 @@ brew install ghostscript
 
 echo 'Install mackup'
 echo '--------------'
-brew install mackup
+#brew install mackup
 
 echo 'Install zsh-autosuggestions'
 echo '---------------------------'
@@ -83,4 +82,3 @@ brew install zsh-autosuggestions
 echo 'Install lame for audio convertion'
 echo '---------------------------'
 brew install lame
-
