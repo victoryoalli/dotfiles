@@ -6,9 +6,12 @@ echo install homebrew
 sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-#echo 'Install node'
+#echo 'Install nvm node'
 #echo '-----------'
-#brew install node@8
+brew install nvm
+nvm install node --lts
+#nvm ls-remote node
+#nvm alias default v14.18.0
 
 #echo 'Install yarn'
 #echo '------------'

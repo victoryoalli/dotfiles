@@ -49,6 +49,13 @@ alias artmf='php artisan migrate:fresh --seed'
 alias serve='php artisan serve'
 alias tinker='php artisan tinker'
 
+# Laravel Valet
+alias vo='valet open'
+if [[ `command -v valet` != '' ]] then 
+	alias php='valet php' ; 
+	alias composer='valet composer' ; 
+fi
+
 #Deploy
 alias deploy='dep deploy'
 
