@@ -71,6 +71,8 @@ alias pest="vendor/bin/pest"
 alias pe="pest"
 alias pef="pe --filter "
 
+alias pint="vendor/bin/pint"
+
 # JavaScript
 #alias jest="./node_modules/.bin/jest"
 

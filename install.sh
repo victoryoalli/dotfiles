@@ -28,6 +28,10 @@ ln -s $HOME/.dotfiles/shell/.ackrc $HOME/.ackrc
 #rm $HOME/.yarnrc
 #ln -s $HOME/.dotfiles/shell/.yarnrc $HOME/.yarnrc
 
+echo 'Install php'
+echo '-----------'
+brew install php
+
 echo 'Install composer'
 echo '----------------'
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -38,6 +42,7 @@ mv composer.phar $HOME/bin/composer
 
 echo 'Install imagick'
 echo '---------------'
+brew install pkg-config imagemagick
 pecl install imagick
 
 echo 'Install memcached'
