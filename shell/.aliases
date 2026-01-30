@@ -3,12 +3,14 @@
 # Shell
 alias hosts="sudo vi /etc/hosts"
 alias h="history"
-alias ls='ls -Gh'
+alias ls='eza --icons'
 alias l='ls -l'
+alias lt='ls --tree'
+alias ll='ls -la --git'
 alias l1='ls -1'
 alias lf='ls -AF'
-alias ll='ls -lFA'
 alias ld='ls -ldA'
+
 alias tree='tree -C -I "node_modules|vendor"'
 
 # SSH
@@ -26,9 +28,9 @@ alias gs="git status"
 alias gdi="git diff"
 alias gc="git checkout"
 alias gcb="git checkout -b"
-alias gpo="git push origin"
+alias gpo="git push -u origin"
+alias gplo="git pull origin"
 alias pull="git pull"
-alias pullo="git pull origin"
 alias fetch="git fetch"
 alias merge="git merge"
 alias gm="git merge"
@@ -37,7 +39,7 @@ alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset
 alias gaut='git shortlog -s -n --all --no-merges'
 
 # PHP
-alias c="composer"
+alias co="composer"
 alias cu="composer update"
 alias cr="composer require"
 alias ci="composer install"
@@ -96,7 +98,8 @@ alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && kill
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
 # IP addresses
-alias ip="curl https://diagnostic.opendns.com/myip ; echo"
+alias ip="curl 'https://api.ipify.org?format=json'"
+
 alias localip="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
 # Flush Directory Service cache
@@ -125,6 +128,19 @@ alias scrape="scrapeUrl"
 alias hideicons='defaults write com.apple.finder CreateDesktop false; killall Finder'
 alias showicons='defaults write com.apple.finder CreateDesktop true; killall Finder'
 
-alias cat='bat -p'
+
+if command -v bat &> /dev/null; then
+alias c='bat -pp'
+alias cc='bat'
+fi
+
 
 alias ackdd="ack '\W(ray|dd|dump)\W'"
+
+## Python
+#alias pip='pip3'
+#alias python='python3'
+# Tail Grep Error
+alias terror='grep -i "error\|exception\|failed" storage/logs/laravel.log | tail -20'
+
+alias claude-yolo="claude --dangerously-skip-permissions"

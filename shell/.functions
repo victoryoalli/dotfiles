@@ -110,13 +110,13 @@ xdebug() {
 # ~/.my.cnf
 function db {
     if [ "$1" = "refresh" ]; then
-        mysql -uroot -e "drop database $2; create database $2"
+        mysql -uroot -e "DROP DATABASE $2; CREATE DATABASE IF NOT EXISTS $2 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"
     elif [ "$1" = "create" ]; then
-        mysql -uroot -e "create database $2"
+        mysql -uroot -e "CREATE DATABASE IF NOT EXISTS $2 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"
     elif [ "$1" = "drop" ]; then
-        mysql -uroot -e "drop database $2"
+        mysql -uroot -e "DROP DATABASE $2"
     elif [ "$1" = "list" ]; then
-        mysql -uroot -e "show databases" | perl -p -e's/\|| *//g'
+        mysql -uroot -e "SHOW DATABASES" | perl -p -e's/\|| *//g'
     elif [ "$1" = "show:tables" ]; then
 	mysql -uroot "$2" -e  "show tables" | perl -p -e's/\|| *//g'
     fi
@@ -145,4 +145,21 @@ function gitzip () {
 	else
 		git archive --format zip --output  $1 $2
 	fi
+}
+
+load_conda() {
+    # >>> conda initialize >>>
+    __conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__conda_setup"
+    else
+        if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+            . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+        else
+            export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
+        fi
+    fi
+    unset __conda_setup
+    # <<< conda initialize <
+    echo "Conda has been loaded!"
 }
