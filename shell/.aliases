@@ -130,7 +130,7 @@ alias showicons='defaults write com.apple.finder CreateDesktop true; killall Fin
 
 
 if command -v bat &> /dev/null; then
-alias c='bat -pp'
+alias c='bat  --paging=never'
 alias cc='bat'
 fi
 
@@ -157,7 +157,7 @@ alias htop="btm"
 alias du="ncdu"
 
 # bat como cat (ya tienes c/cc, este es más intuitivo)
-alias cat="bat --paging=never"
+alias cat="bat -pp"
 
 # delta - diffs bonitos fuera de git
 alias diff="delta"
