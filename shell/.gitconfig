@@ -1,0 +1,42 @@
+[user]
+	name = Victor Yoalli
+	email = victoryoalli@gmail.com
+
+[core]
+	editor = vim
+	pager = delta
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true
+	side-by-side = true
+	line-numbers = true
+	syntax-theme = Dracula
+
+[merge]
+	conflictstyle = diff3
+
+[diff]
+	colorMoved = default
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = false
+
+[push]
+	autoSetupRemote = true
+
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	visual = !gitk

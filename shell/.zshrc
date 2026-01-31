@@ -33,6 +33,9 @@ for file in ~/.dotfiles/shell/.{exports,aliases,functions}; do
 done
 unset file
 
+# Load secrets (tokens, API keys) - este archivo NO debe estar en git
+[ -f ~/.secrets ] && source ~/.secrets
+
 # Setup xdebug
 export XDEBUG_CONFIG="idekey=VSCODE"
 
@@ -84,7 +87,7 @@ jenv() {
 [[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
 
 # Q post block. Keep at the bottom of this file.
-export GITHUB_PACKAGE_REGISTRY_TOKEN=REDACTED
+# GITHUB_PACKAGE_REGISTRY_TOKEN movido a ~/.secrets por seguridad
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

@@ -144,3 +144,57 @@ alias ackdd="ack '\W(ray|dd|dump)\W'"
 alias terror='grep -i "error\|exception\|failed" storage/logs/laravel.log | tail -20'
 
 alias claude-yolo="claude --dangerously-skip-permissions"
+
+# ============================================
+# Herramientas CLI modernas
+# ============================================
+
+# bottom - monitor de sistema moderno (reemplaza htop/top)
+alias top="btm"
+alias htop="btm"
+
+# ncdu - uso de disco interactivo
+alias du="ncdu"
+
+# bat como cat (ya tienes c/cc, este es más intuitivo)
+alias cat="bat --paging=never"
+
+# delta - diffs bonitos fuera de git
+alias diff="delta"
+
+# glow/mdcat - renderizar markdown en terminal
+alias readme="glow"
+alias md="mdcat"
+
+# ripgrep mejorado
+alias rg="rg --smart-case"
+
+# grep con color (reemplaza GREP_OPTIONS deprecado)
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# ============================================
+# yt-dlp - descargar videos
+# ============================================
+alias yt="yt-dlp"
+alias yta="yt-dlp -x --audio-format mp3"           # solo audio mp3
+alias ytv="yt-dlp -f 'best[height<=1080]'"         # video max 1080p
+alias ytp="yt-dlp -o '%(playlist_index)s-%(title)s.%(ext)s'"  # playlist
+
+# ============================================
+# GitHub CLI (gh) - reemplaza hub
+# ============================================
+alias pr="gh pr"
+alias prc="gh pr create"
+alias prv="gh pr view"
+alias prs="gh pr status"
+alias issue="gh issue"
+alias repo="gh repo"
+alias gist="gh gist"
+
+# ============================================
+# Ollama - LLMs locales
+# ============================================
+alias ai="ollama run llama3.2"
+alias aic="ollama run codellama"

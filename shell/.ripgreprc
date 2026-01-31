@@ -1,0 +1,35 @@
+# ripgrep configuración
+# https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md
+
+# Búsqueda inteligente (case-insensitive si todo es minúsculas)
+--smart-case
+
+# Incluir archivos ocultos
+--hidden
+
+# Excluir directorios comunes
+--glob=!.git
+--glob=!node_modules
+--glob=!vendor
+--glob=!.next
+--glob=!dist
+--glob=!build
+--glob=!*.min.js
+--glob=!*.min.css
+--glob=!package-lock.json
+--glob=!composer.lock
+--glob=!yarn.lock
+
+# Máximo de columnas antes de truncar
+--max-columns=200
+
+# Mostrar números de línea
+--line-number
+
+# Colores
+--colors=line:fg:yellow
+--colors=line:style:bold
+--colors=path:fg:green
+--colors=path:style:bold
+--colors=match:fg:red
+--colors=match:style:bold

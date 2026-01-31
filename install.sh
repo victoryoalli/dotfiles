@@ -24,6 +24,24 @@ ln -s $HOME/.dotfiles/shell/.vim $HOME/.vim
 # Symlink ack pref
 ln -s $HOME/.dotfiles/shell/.ackrc $HOME/.ackrc
 
+# Symlink git config (con delta)
+rm -f $HOME/.gitconfig
+ln -s $HOME/.dotfiles/shell/.gitconfig $HOME/.gitconfig
+
+# Symlink ripgrep config
+rm -f $HOME/.ripgreprc
+ln -s $HOME/.dotfiles/shell/.ripgreprc $HOME/.ripgreprc
+
+# Crear archivo de secretos si no existe
+if [ ! -f $HOME/.secrets ]; then
+    echo "# Archivo de secretos - NO SUBIR A GIT" > $HOME/.secrets
+    echo "# Agrega tus tokens aquí" >> $HOME/.secrets
+    echo "" >> $HOME/.secrets
+    echo "# export GITHUB_PACKAGE_REGISTRY_TOKEN=\"\"" >> $HOME/.secrets
+    chmod 600 $HOME/.secrets
+    echo "Archivo ~/.secrets creado. Agrega tus tokens ahí."
+fi
+
 # Symlink yarn prefs
 #rm $HOME/.yarnrc
 #ln -s $HOME/.dotfiles/shell/.yarnrc $HOME/.yarnrc

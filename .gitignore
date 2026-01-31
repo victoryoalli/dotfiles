@@ -1,0 +1,20 @@
+# Secretos - NUNCA subir a git
+.secrets
+shell/.secrets
+*.secrets
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Archivos de respaldo
+*.bak
+*.backup
+*~
+
+# Editor específicos
+*.swp
+*.swo
+.idea/
+.vscode/settings.json
